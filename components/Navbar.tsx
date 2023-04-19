@@ -21,7 +21,7 @@ export default function Navbar () {
     ]
 
     return (
-        <nav className="flex w-1/2 navbar h-screen absolute left-0 top-0">
+        <nav className={`flex w-1/2 navbar h-screen fixed left-0 top-0 ${isMenuOpen ? "z-50":"z-10" }`}>
             <div className="flex flex-col justify-between items-center w-[90px] py-[25px] border-r-[1px] border-b-[1px] border-white">
                 <button onClick={handleMenuToggle} className="text-white">
                     <Image src="/menu.svg" width={36} height={0} alt="menu"/>
@@ -33,7 +33,7 @@ export default function Navbar () {
                 <Image src="/genzen.svg" width={36} height={0} alt="genzen"/>
             </div>
 
-            <div className={`w-full ${isMenuOpen ? 'block z-20 bg-black' : 'hidden'}`}>
+            <div className={`w-full ${isMenuOpen ? 'block bg-black' : 'hidden'}`}>
                 <div className="my-[25px] mx-[30px]">
                     <div className="flex flex-col space-y-[30px]">
                         {navigation.map((item) => (

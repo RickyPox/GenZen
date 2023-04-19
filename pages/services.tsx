@@ -56,19 +56,18 @@ const nextService = () =>{
 return (
 <div className="h-screen relative">
     <Navbar></Navbar>
-    <div>
-    </div>
     <div
     style={{ flexDirection: openServiceIndex === totalServices-1 ? "row-reverse" : "row", }} 
-    className={`ml-[90px] flex text-white`}>
+    className={`ml-[90px] flex text-white relative z-20`}>
+        
         {services.map((service, index) => (
             <div 
-            style={{backgroundImage: openServiceIndex === index ?  `url(${service.fullImage})`: `url(${service.image})`, 
-            width:  openServiceIndex === index ? serviceWidth*(totalServices-1) : serviceWidth, 
-            display: index === openServiceIndex || index === openServiceIndex+1 || openServiceIndex === totalServices-1 && index === 0|| openServiceIndex === -1 ? "flex":"none" }} 
-            className={`bg-cover h-screen ${index=== openServiceIndex ? "justify-start" : "justify-center"} items-end overflow-x-hidden relative border-r-2 border-white transition-all duration-500`}
-            key={service.name}
-            onClick={() => handleOnClick(index)}
+                style={{backgroundImage: openServiceIndex === index ?  `url(${service.fullImage})`: `url(${service.image})`, 
+                width:  openServiceIndex === index ? serviceWidth*(totalServices-1) : serviceWidth, 
+                display: index === openServiceIndex || index === openServiceIndex+1 || openServiceIndex === totalServices-1 && index === 0|| openServiceIndex === -1 ? "flex":"none" }} 
+                className={`bg-cover h-screen ${index=== openServiceIndex ? "justify-start" : "justify-center"} items-end overflow-x-hidden relative border-r-2 border-white transition-all duration-500`}
+                key={service.name}
+                onClick={() => handleOnClick(index)}
             >
                 <div className={`h-[150px] flex flex-col items-center mb-[50px] space-y-[20px] transition-all duration-500 ${index === openServiceIndex ? "ml-[50px]" : ""}`}>
                     <div className={`${index === openServiceIndex ? "block" : "hidden"}`}>
