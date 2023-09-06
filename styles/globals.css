@@ -38,3 +38,18 @@ h3{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
+.scroll-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .scroll-container section{
+    height: 100vh;
+    scroll-snap-align: center;
+  }
+  
