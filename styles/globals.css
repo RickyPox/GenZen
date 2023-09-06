@@ -2,20 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
-  font-family: 'Maharlika';
-  src: 
-      url('/fonts/maharlika-regular.ttf') format('truetype');
-      font-weight: 400;
-      font-display: swap;
-      font-style: normal;
+    font-family: 'Maharlika';
+    src: 
+        url('/fonts/maharlika-regular.ttf') format('truetype');
+        font-weight: 400;
+        font-display: swap;
+        font-style: normal;
 }
 
-.navbar .sidebartext{
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
+img{
+    max-width: max-content;
 }
 
-.verticaltext{
-  writing-mode: vertical-rl;
+h2{
+    font-family: "Maharlika", sans-serif;
+    color:white;
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+}
+
+h3{
+    font-family: "Maharlika", sans-serif;
+    color:#F3AF00;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+}
+
+.buttonToBorder{
+    background: url("/ButtonBorder.png"), linear-gradient(0deg, rgba(39,39,39,1) 0%, rgba(66,66,66,1) 50%, rgba(180,180,180,1) 100%);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }

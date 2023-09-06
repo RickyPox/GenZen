@@ -6,7 +6,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className='bg-black font-[Maharlika] uppercase'>   
+      <body className='bg-black'>   
         <Main />
         <NextScript />
       </body>

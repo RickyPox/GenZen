@@ -41,7 +41,7 @@ const handleOnClick = (index:any) => {
     } 
     else 
     {
-    setOpenServiceIndex(-1);;
+    setOpenServiceIndex(-1);
     }
 };
 
