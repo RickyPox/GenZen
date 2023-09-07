@@ -39,11 +39,7 @@ export default function Navbar () {
                         <img className="navbarItemStar transition-all duration-200" src="/navbar/GoldStar.png" alt="Star"/>
                     </Link>
             </div>
-            <div className="flex">
-                <img src="/Twitter.svg" alt="Twitter"/>
-                <img src="/Insta.svg" alt="Insta"/>
-                <img src="/LinkedIn.svg" alt="LinkedIn"/>
-            </div>
+             
         </div>
     </nav>
     )

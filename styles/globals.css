@@ -76,11 +76,7 @@ h3{
     scroll-snap-align: center;
   }
 }
-
-  .container-tilt {
-    perspective: 1000px;
-  }
-  
+ 
   
   .divToTilt {
     width: 100%;
