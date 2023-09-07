@@ -57,7 +57,7 @@ export default function AnimationComponent (props:any) {
                     <img className="w-[100%]" src="/animation/Border.png" alt="Border"></img>
                 </div>
                 {/* STARS */}
-                <MouseParallaxChild style={tiltStyle} factorX={0.6} factorY={0.5} className="flex justify-center w-[100%] absolute z-40 divToTilt">
+                <MouseParallaxChild style={tiltStyle} inverted factorX={0.6} factorY={0.5} className="flex justify-center w-[100%] absolute z-40 divToTilt">
                     <img
                     style={{
                         width: "100%",
@@ -65,7 +65,7 @@ export default function AnimationComponent (props:any) {
                         transform:` translate(${props.translateXTopStar}, ${props.translateYTopStar})`
                     }}  src="/animation/Star.png" alt="Star"/>
                 </MouseParallaxChild>
-                <MouseParallaxChild style={tiltStyle} factorX={0.7} factorY={0.2} className="flex justify-center w-[100%] absolute z-40 divToTilt">
+                <MouseParallaxChild style={tiltStyle} inverted factorX={0.7} factorY={0.2} className="flex justify-center w-[100%] absolute z-40 divToTilt">
                     <img
                     style={{
                         width: "100%",
@@ -73,7 +73,7 @@ export default function AnimationComponent (props:any) {
                         transform:` translate(${props.translateXMiddleStar}, ${props.translateYMiddleStar})`
                     }}  src="/animation/Star.png" alt="Star"/>
                 </MouseParallaxChild>
-                <MouseParallaxChild style={tiltStyle} factorX={0.5} factorY={0.7} className="flex justify-center w-[100%] absolute z-40 divToTilt">
+                <MouseParallaxChild style={tiltStyle} inverted factorX={0.5} factorY={0.7} className="flex justify-center w-[100%] absolute z-40 divToTilt">
                     <img
                     style={{
                         width: "100%",

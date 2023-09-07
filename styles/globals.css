@@ -12,6 +12,8 @@
         font-style: normal;
 }
 
+
+
 img{
     max-width: max-content;
 }
@@ -33,11 +35,6 @@ h3{
     text-align: center;
 }
 
-button{
-  font-size: calc(10px + (15 - 10) * ((100vw - 300px) / (1600 - 300)));
-  padding: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
-}
-
 @media screen and (min-width: 1600px) {
   h2{
     font-size:32px;
@@ -45,7 +42,7 @@ button{
   h3{
     font-size: 20px;
   }
-  button{
+  .buttonToBorder{
     font-size: 15px;
     padding: 20px;
   }
@@ -58,22 +55,27 @@ button{
     background-repeat: no-repeat;
     border-image: url("/ButtonBorder.png") 30 round;
     border-image-width: 10px;
+    font-size: calc(10px + (15 - 10) * ((100vw - 300px) / (1600 - 300)));
+    padding: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
+.page-border{
+  border-image: url("/PageBorder.png") 30 round;
+  border-image-width: 30px;
+} 
 
+@media (pointer: fine){
 .scroll-container {
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: scroll;
     scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
   }
 
   .scroll-container section{
     height: 100vh;
     scroll-snap-align: center;
   }
-  
+}
 
   .container-tilt {
     perspective: 1000px;
@@ -90,3 +92,13 @@ button{
     transform-style: preserve-3d;
     transition-duration: 200ms;
   }
+
+
+.navbarItem:hover .navbarItemStar{
+  opacity:1;
+}
+
+.navbarItemStar{
+  opacity:0;
+}
+
