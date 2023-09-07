@@ -10,6 +10,7 @@ export default function Home() {
       <Navbar></Navbar>
       <div className='overflow-x-hidden'>
         <AnimationSection></AnimationSection>
+
       </div>
     </div>
     

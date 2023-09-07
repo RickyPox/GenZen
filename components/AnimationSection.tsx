@@ -5,7 +5,11 @@ export default function AnimationSection (){
         <div className="scroll-container">
             <section className="grid grid-cols-3 w-screen justify-center items-center">
                 <div> 
-                    <AnimationComponent title={"Famous Foxes"} categorie={"Marketing Trailer"}></AnimationComponent>
+                    <AnimationComponent title={"Famous Foxes"} translateYChar={"17%"} 
+                    translateXTopStar={"-45%"} translateYTopStar={"-25%"} 
+                    translateXMiddleStar={"60%"} translateYMiddleStar={"0"} 
+                    translateXBottomStar={"0"} translateYBottomStar={"50%"}
+                    categorie={"Marketing Trailer"}></AnimationComponent>
                 </div> 
                 <div> 
                     <AnimationComponent title={"Elixir"} categorie={"Marketing Trailer"}></AnimationComponent>
