@@ -95,6 +95,7 @@ h3{
 .page-border{
   border-image: url("/PageBorder.png") 30 round;
   border-image-width: 30px;
+  border-color:white;
 } 
 
 .page{
