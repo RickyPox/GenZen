@@ -38,15 +38,13 @@ const tiltStyleBackground = {
     transform: `rotateX(${y * 10}deg) rotateY(${x * 10}deg)`,
 };
 
-
-
     return(
-            <div >
+            <div>
                 <div className="relative flex justify-center items-center w-[100%]">
                     <div className="bg-none absolute w-[100%] h-[100%] z-50 " onMouseMove={handleMouseMove} onMouseLeave={mouseLeave}/>
                     <div style={tiltStyleBackground} className="z-40"><img className="w-[100%] " src="/animation/Ring.png" alt="Ring"></img></div>
                     <div style={tiltStyleBackground} className=" flex justify-center w-[100%] absolute divToTilt">
-                        <img className=" w-[100%]" src={`animation/${props.title}/Background.png`} alt="Background"></img>
+                        <img className=" w-[100%]" src={`/animation/${props.title}/Background.png`} alt="Background"></img>
                     </div>  
                     <div  style={tiltStyleChar} className="flex justify-center left-0 right-0 m-auto absolute z-10 divToTilt">
                             <img 
@@ -55,7 +53,7 @@ const tiltStyleBackground = {
                                 width: "100%",
                                 transform:` translateY(-${props.translateYChar})`
                             }} 
-                            src={`animation/${props.title}/Char.png`} 
+                            src={`/animation/${props.title}/Char.png`} 
                             alt="Character"></img> 
                     </div>
                     <div className="flex justify-center w-[100%] absolute z-10 divToTilt">

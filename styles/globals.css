@@ -12,6 +12,13 @@
         font-style: normal;
 }
 
+body{
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
 
 img{
     max-width: max-content;
@@ -46,11 +53,14 @@ h3{
   text-transform: uppercase;
   color:#979797;
   border-image: url("/ButtonBorder.png") 30 round;
-    border-image-width: 10px;
+  border-image-width: 10px;
 }
 
 .projectSections a{
-  
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 
@@ -90,8 +100,6 @@ h3{
 .page{
   height: calc(100vh - 20px);
   width: calc(100vw - 20px);
-  border-image: url("/PageBorder.png") 30 round;
-  border-image-width: 30px;
   margin: 10px;
 }
 /* @media (pointer: fine){

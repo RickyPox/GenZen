@@ -1,9 +1,11 @@
-import AnimationComponent from "./AnimationComponent";
+import Navbar from "@/components/Navbar";
+import AnimationComponent from "../components/AnimationComponent";
 
-export default function AnimationSection (){
+export default function Animation (){
     return(
-                <div className="scroll-container">
-                    <div className="page-border fixed top-[50%] -translate-y-[50%] left-0 right-0 m-auto w-[98%] h-[98%] -z-[10]"/>
+                <div>
+                    <Navbar></Navbar>
+                    <div className="page-border page fixed -z-[10]"/>
                     <div>
                         <img className="fixed w-[90%] mt-[60px] left-0 right-0 m-auto -z-[10]" src="/animation/AnimationTitle.png" alt="Title Image"/>
                     </div>
