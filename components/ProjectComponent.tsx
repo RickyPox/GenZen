@@ -18,7 +18,7 @@ return (
         </div>
 
 {/* ABSOLUTE POSITIONS HERO SECTION // MENU */}
-        <img className='w-[76%] absolute top-[50%] -translate-y-[50%] right-0  -z-[10]' src="/projects/AnimationChar.png" alt="Hero"/>
+        <img className='w-[76%] absolute top-[50%] -translate-y-[50%] right-0  -z-[20]' src="/projects/AnimationChar.png" alt="Hero"/>
         <div className='flex justify-center'>
             <div className='absolute bottom-[10%]  inline-flex items-center projectSections bg-black '>
                 <Link className='hover:text-[#AF804B] ' href="#">

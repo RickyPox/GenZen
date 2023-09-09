@@ -20,7 +20,7 @@ body::-webkit-scrollbar{
   display: none;
 }
 
-img{
+  img{
     max-width: max-content;
 }
 
@@ -93,9 +93,12 @@ h3{
 }
 
 .page-border{
-  border-image: url("/PageBorder.png") 30 round;
-  border-image-width: 30px;
-  border-style: solid;
+    border-style: solid;
+    border-width: 30px 30px 30px 30px;
+    -moz-border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
+    -webkit-border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
+    -o-border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
+    border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
 } 
 
 .page{
