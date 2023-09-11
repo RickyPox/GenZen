@@ -41,7 +41,7 @@ const tiltStyleBackground = {
     return(
             <div>
                 <div className="relative flex justify-center items-center w-[100%]">
-                    <div className="bg-none absolute w-[100%] h-[100%] z-50 " onMouseMove={handleMouseMove} onMouseLeave={mouseLeave}/>
+{/*                     <div className="bg-none absolute w-[100%] h-[100%] z-[100] " onMouseMove={handleMouseMove} onMouseLeave={mouseLeave}/> */}
                     <div style={tiltStyleBackground} className="z-40"><img className="w-[100%] " src="/animation/Ring.png" alt="Ring"></img></div>
                     <div style={tiltStyleBackground} className=" flex justify-center w-[100%] absolute divToTilt">
                         <img className=" w-[100%]" src={`/animation/${props.title}/Background.png`} alt="Background"></img>
@@ -89,7 +89,7 @@ const tiltStyleBackground = {
                     </div>
 
                     {/* Text/Button */}
-                    <div className="absolute bottom-[5%] left-0 right-0 m-auto z-40 w-[100%]">
+                    <div className="absolute bottom-[5%] left-0 right-0 m-auto z-50 w-[100%]"  >
                         <h2>{props.title}</h2>
                         <h3 className="mb-[10px]">{props.categorie}</h3>
                         <Button title={"Take Me There"} width="Big"></Button>

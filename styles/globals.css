@@ -48,21 +48,20 @@ h3{
 }
 
 .projectSections{
-  font-size: calc(8px + (26 - 8) * ((100vw - 300px) / (1600 - 300)));
+
+  border-image: url("/ButtonBorder.png") 40 round;
+  border-image-width: 20px;
+}
+
+.projectSections button{
+  padding-right: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
+  padding-left: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
+  padding-bottom: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
+  padding-top: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
+  font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (1600 - 300)));
   font-family: "Maharlika", sans-serif;
   text-transform: uppercase;
-  color:#979797;
-  border-image: url("/ButtonBorder.png") 30 round;
-  border-image-width: 10px;
 }
-
-.projectSections a{
-  padding-right: 30px;
-  padding-left: 30px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-}
-
 
 @media screen and (min-width: 1600px) {
   h2{
@@ -79,6 +78,15 @@ h3{
   .p{
     font-size:22px;
   }
+
+  .projectSections button{
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    font-size:20px
+  }
+  
 }
 
 .buttonToBorder{
@@ -94,7 +102,7 @@ h3{
 
 .page-border{
     border-style: solid;
-    border-width: 30px 30px 30px 30px;
+    border-width: 40px 30px 40px 30px;
     -moz-border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
     -webkit-border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
     -o-border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
@@ -106,6 +114,10 @@ h3{
   width: calc(100vw - 20px);
   margin: 10px;
 }
+
+
+
+
 /* @media (pointer: fine){
 .scroll-container {
     height: 100vh;
