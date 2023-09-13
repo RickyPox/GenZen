@@ -1,23 +1,21 @@
 import Navbar from "@/components/Navbar";
-import Testimonials from "@/components/Testimonials";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel"
+
 
 export default function Clients(){
     return(
-    <div className="w-screen h-screen flex flex-col items-center">
+    <div className="w-screen h-screen">
+        <div className="page-border page fixed"/>
         <Navbar></Navbar>
-        <div className="page-border page fixed z-[10]"/>
-            <div className="mt-[90px] flex items-center px-[50px]">
+        
+            <div className="pt-[90px] flex items-center justify-center px-[50px]">
                 <img className="w-full" src="/clients/TestimonialsTitle.png" alt="TestimonialsTitle"></img>
             </div>
 
-                <div className="flex space-x-[115px]">
-                    <Testimonials></Testimonials>
-                    <Testimonials></Testimonials>
-                    <Testimonials></Testimonials>
-                </div>
+                <TestimonialsCarousel></TestimonialsCarousel>
 
         <div>
-            <img src="/clients/Divider.png" alt="Divider"></img>
+            <img className="m-auto" src="/clients/Divider.png" alt="Divider"></img>
         </div>
         <p className="text-center text-[22px] px-[140px] mt-[75px]"> 
             Through the lens of our clients&apos; testimonials, our reputation shines. 

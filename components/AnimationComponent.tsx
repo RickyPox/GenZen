@@ -1,5 +1,3 @@
-import { MouseParallaxContainer, MouseParallaxChild  } from "react-parallax-mouse";
-import Tilt from "react-parallax-tilt";
 import Button from "./Button";
 import { useState } from "react";
 

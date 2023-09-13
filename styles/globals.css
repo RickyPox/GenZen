@@ -12,9 +12,7 @@
         font-style: normal;
 }
 
-body{
-  overflow-x: hidden;
-}
+
 
 body::-webkit-scrollbar{
   display: none;
@@ -114,7 +112,6 @@ h3{
     border-image: url("/ButtonBorder.png") 20 20 20 20 repeat repeat;
 }
 
-
 /* @media (pointer: fine){
 .scroll-container {
     height: 100vh;
@@ -153,4 +150,34 @@ h3{
   .p{
     font-size:22px;
   }
+}
+
+
+.swiper-slide {
+  display: flex!important;
+  justify-content: center!important;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  width: 100px!important;
+  height: 100px!important;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after{
+  content: ""!important; 
+  margin:auto!important;
+  background-image: url("/Scroll_Icon.png");
+  width: 100px!important;
+  height: 100px!important;
+  background-size: cover;
+}
+
+.swiper-button-next{
+  transform: rotate(-90deg);
+  right:20%!important;
+}
+
+.swiper-button-prev{
+  transform: rotate(90deg);
+  left:20%!important;
 }
