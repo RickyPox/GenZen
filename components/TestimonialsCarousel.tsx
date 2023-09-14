@@ -1,4 +1,4 @@
-import Testimonials from "@/components/Testimonials";
+import Testimonial from "@/components/Testimonial";
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow } from 'swiper/modules'
@@ -18,19 +18,9 @@ export default function TestimonialsCarousel (){
             text:"Working with Zen and his studio was an absolute pleasure. Their team supported us throughout all the way from idea generation to asset creation. I would personally highly recommend them to anyone looking for a team that has your back no matter what."
         },
         {
-            name:"DRAXXTS",
+            name:"draxxts",
             project:"FAMOUS FOX FED",
             text:"We worked with Gen Zen to produce an animated short film for the Famous Fox Federation. We were incredibly impressed with their work. They were very prompt in their responses, always willing to jump on calls, and helpful in brainstorming ideas. The final product was incredible, and I would highly recommend them to anyone looking for high-quality animation or design work."       
-        },
-        {
-            name:"Teste4",
-            project:"clear collectibles",
-            text:"Working with Zen and his studio was an absolute pleasure. Their team supported us throughout all the way from idea generation to asset creation. I would personally highly recommend them to anyone looking for a team that has your back no matter what."
-        },
-        {
-            name:"Teste5",
-            project:"clear collectibles",
-            text:"Working with Zen and his studio was an absolute pleasure. Their team supported us throughout all the way from idea generation to asset creation. I would personally highly recommend them to anyone looking for a team that has your back no matter what."
         },
     ]
     return(
@@ -41,7 +31,7 @@ export default function TestimonialsCarousel (){
                 modules={[Navigation]}
                 centeredSlides={true}
                 loop={true}
-                spaceBetween={160}
+                spaceBetween={120}
                 slidesPerView={2}
 
             >
@@ -49,7 +39,7 @@ export default function TestimonialsCarousel (){
                     <SwiperSlide
                     key={index}
                     >
-                        <Testimonials name={testimonial.name} project={testimonial.project} text={testimonial.text}></Testimonials>
+                        <Testimonial name={testimonial.name} project={testimonial.project} text={testimonial.text}></Testimonial>
                     </SwiperSlide>
                 ))}
             </Swiper>

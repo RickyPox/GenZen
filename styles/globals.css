@@ -173,11 +173,13 @@ h3{
 }
 
 .swiper-button-next{
-  transform: rotate(-90deg);
-  right:20%!important;
+  transform: rotate(90deg);
+  left:21%!important;
+  right: auto!important;
 }
 
 .swiper-button-prev{
-  transform: rotate(90deg);
-  left:20%!important;
+  transform: rotate(-90deg);
+  right:21%!important;
+  left:auto!important;
 }

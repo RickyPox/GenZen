@@ -35,7 +35,7 @@ export default function Navbar () {
                             <img className="sm:w-[100%] w-[40%]" src="/navbar/Projects.png" alt="Projects"/> 
                             <img className="sm:w-[100%] w-[12%] navbarItemStar transition-all duration-200" src="/navbar/GoldStar.png" alt="Star"/>
                         </Link>
-                        <Link href="#" className="navbarItem flex items-center">
+                        <Link href="About" className="navbarItem flex items-center">
                             <img className="sm:w-[100%] w-[40%]" src="/navbar/AboutUs.png" alt="About Us"/> 
                             <img className="sm:w-[100%] w-[12%] navbarItemStar transition-all duration-200" src="/navbar/GoldStar.png" alt="Star"/>
                         </Link>

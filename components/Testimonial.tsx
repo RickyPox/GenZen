@@ -1,8 +1,9 @@
-export default function Testimonials (props:any){
+export default function Testimonial (props:any){
 
 
     return(
-            <div className="inline-flex w-[870px] h-[300px] items-center space-x-[20px] bg-[#111111] px-[20px] border mt-[90px] mb-[40px]">
+
+            <div className="inline-flex w-[770px] h-[300px] items-center space-x-[20px] bg-[#111111] px-[20px] border mt-[90px] mb-[40px]">
                     <div className="flex flex-col space-y-[20px] justify-center items-center">
                         <img src={`/clients/${props.name}Avatar.png`} alt="ClientAvatar"></img>
                         <div className=" w-[200px]">
