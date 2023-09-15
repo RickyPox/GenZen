@@ -52,7 +52,7 @@ return (
         </div>
 
             <div className="hidden md:flex justify-center">
-        <div className="fixed bottom-[10%]  inline-flex items-center justify-center projectSections bg-black z-[] ">
+        <div className="fixed bottom-[10%]  inline-flex items-center justify-center projectSections bg-black ">
         {projects.map((project, index) => (
             <React.Fragment key={index}>
             {index > 0 && (

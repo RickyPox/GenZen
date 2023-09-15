@@ -34,6 +34,7 @@ h2{
 p{
   font-family: 'Inter', sans-serif;
   color:white;
+  line-height: 150%;
 }
 
 p.projectText {
@@ -182,4 +183,53 @@ h3{
   transform: rotate(-90deg);
   right:21%!important;
   left:auto!important;
+}
+
+.contact input::placeholder{
+  font-family: "Maharlika", sans-serif;
+  text-transform: uppercase;
+  font-size:24px;
+  color: #787878;
+}
+
+.contact input[type=text]{
+  background-color: transparent;
+  border: solid 2px white;
+  color:white;
+  font-size: 24px;
+  font-family: "Maharlika", sans-serif;
+  padding-left: 20px;
+
+}
+
+.contact textarea{
+  background-color: transparent;
+  border: solid 2px white;
+  color:white;
+  font-size: 24px;
+  font-family: "Maharlika", sans-serif;
+  padding-left: 20px;
+  padding-top: 20px;
+
+}
+
+.contact textarea::placeholder{
+  font-family: "Maharlika", sans-serif;
+  text-transform: uppercase;
+  font-size:24px;
+  color: #787878;
+}
+
+form input[type=submit]{
+  font-family: "Maharlika", sans-serif;
+  text-transform: uppercase;
+  font-size:24px;
+  color: white;
+  background-image: url("/contact/formButtonBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 300px;
+  height: 100px;
+
 }
