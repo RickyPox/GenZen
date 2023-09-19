@@ -41,16 +41,17 @@ return (
             <div className="page-border page fixed -z-[10]"/>
             <div>
             {projects.map((project, index) => (
-            <div
+            <section
                 key={index}
                 id={project.id}
                 
             >
                 <ProjectComponent title={project.title} text={project.text} href={project.href}  />
-            </div>
+            </section>
             ))}
         </div>
 
+                {/* PROJECTS MENU */}
             <div className="hidden md:flex justify-center">
         <div className="fixed bottom-[10%]  inline-flex items-center justify-center projectSections bg-black ">
         {projects.map((project, index) => (

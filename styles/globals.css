@@ -53,6 +53,11 @@ h3{
     text-align: center;
 }
 
+section{
+  max-width: 1920px;
+  margin: auto;
+}
+
 .projectSections{
   border-image: url("/ButtonBorder.png") 40 round;
   border-image-width: 20px;
@@ -92,11 +97,20 @@ h3{
 .page-border{
     border-style: solid;
     border-width: 40px 30px 40px 30px;
-    -moz-border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
-    -webkit-border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
-    -o-border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
-    border-image: url("/PageBorder.png") 30 30 30 30 repeat repeat;
+    -moz-border-image: url("/PageBorder.png") 30 30 30 30 stretch stretch;
+    -webkit-border-image: url("/PageBorder.png") 30 30 30 30 stretch stretch;
+    -o-border-image: url("/PageBorder.png") 30 30 30 30 stretch stretch;
+    border-image: url("/PageBorder.png") 30 30 30 30 stretch stretch;
 } 
+
+.videoBorder{
+  border-style: solid;
+  border-width: 20px 20px 20px 20px;
+  -moz-border-image: url("/VideoBorder.png") 55 55 55 55 stretch stretch;
+  -webkit-border-image: url("/VideoBorder.png") 55 55 55 55 stretch stretch;
+  -o-border-image: url("/VideoBorder.png") 55 55 55 55 stretch stretch;
+  border-image: url("/VideoBorder.png") 55 55 55 55 stretch stretch;
+  }
 
 .page{
   height: calc(100vh - 20px);
@@ -107,10 +121,10 @@ h3{
 .border{
   border-style: solid;
     border-width: 20px 20px 20px 20px;
-    -moz-border-image: url("/ButtonBorder.png") 20 20 20 20 repeat repeat;
-    -webkit-border-image: url("/ButtonBorder.png") 20 20 20 20 repeat repeat;
-    -o-border-image: url("/ButtonBorder.png") 20 20 20 20 repeat repeat;
-    border-image: url("/ButtonBorder.png") 20 20 20 20 repeat repeat;
+    -moz-border-image: url("/ButtonBorder.png") 20 20 20 20 stretch stretch;
+    -webkit-border-image: url("/ButtonBorder.png") 20 20 20 20 stretch stretch;
+    -o-border-image: url("/ButtonBorder.png") 20 20 20 20 stretch stretch;
+    border-image: url("/ButtonBorder.png") 20 20 20 20 stretch stretch;
 }
 
 /* @media (pointer: fine){
@@ -154,17 +168,58 @@ h3{
 }
 
 
-.swiper-slide {
+/* SWIPER */
+
+.verticalSwiper .swiper-button-prev:after, .verticalSwiper .swiper-button-next:after {
+  content: ""!important; 
+  margin:auto!important;
+  background-image: url("/Scroll_Icon.png");
+  width: 100px!important;
+  height: 100px!important;
+  background-size: cover;
+  
+}
+
+.verticalSwiper .swiper-button-prev, .verticalSwiper .swiper-button-next{
+  width: 130px!important;
+  height: 130px!important;
+  position: fixed;
+  top:0;
+  left: 0;
+  background-image: url("/Scroll_Icon.png");
+  background-size: cover;
+  cursor: pointer;
+}
+
+.verticalSwiper .swiper-button-disabled{
+  display: none!important;
+}
+
+.verticalSwiper .swiper-button-next{
+  top: auto!important;
+  bottom:50px!important;
+  left:50%!important;
+  transform: translateX(-50%);
+}
+
+.verticalSwiper .swiper-button-prev{
+  transform: rotate(-90deg);
+  right:21%!important;
+  left:auto!important;
+}
+
+
+.testimonialSwiper .swiper-slide {
   display: flex!important;
   justify-content: center!important;
 }
 
-.swiper-button-prev, .swiper-button-next{
+.testimonialSwiper .swiper-button-prev,.testimonialSwiper .swiper-button-next{
   width: 100px!important;
   height: 100px!important;
 }
 
-.swiper-button-prev:after, .swiper-button-next:after{
+.testimonialSwiper .swiper-button-prev:after, .testimonialSwiper .swiper-button-next:after{
   content: ""!important; 
   margin:auto!important;
   background-image: url("/Scroll_Icon.png");
@@ -173,17 +228,19 @@ h3{
   background-size: cover;
 }
 
-.swiper-button-next{
+.testimonialSwiper .swiper-button-next{
   transform: rotate(90deg);
   left:21%!important;
   right: auto!important;
 }
 
-.swiper-button-prev{
+.testimonialSwiper .swiper-button-prev{
   transform: rotate(-90deg);
   right:21%!important;
   left:auto!important;
 }
+
+/*FORM */
 
 .contact input::placeholder{
   font-family: "Maharlika", sans-serif;
@@ -232,4 +289,94 @@ form input[type=submit]{
   width: 300px;
   height: 100px;
 
+}
+
+
+
+/* BUTTON GLOW STYLE */
+
+a.glow-on-hover{
+  position: relative;
+  overflow: hidden;
+}
+
+a.glow-on-hover span.glow{
+  position: absolute;
+  display: block;
+}
+
+.glow-on-hover:hover span:nth-of-type(1){
+  top:0;
+  left:0;
+  width: 100%;
+  height: 5px;
+  background:linear-gradient(90deg, transparent, white);
+  animation: animate1 2s infinite;
+  margin: 0!important;
+}
+@keyframes animate1 {
+  0%{
+    left:-100%
+  }
+  100%{
+    left:100%
+  }
+}
+
+.glow-on-hover:hover span:nth-of-type(2){
+  top:-100%;
+  right:0;
+  width: 5px;
+  height: 100%;
+  background:linear-gradient(180deg, transparent, white);
+  animation: animate2 2s infinite;
+  animation-delay: .5s;
+  margin: 0!important;
+}
+@keyframes animate2 {
+  0%{
+    top:-100%
+  }
+  100%{
+    top:100%
+  }
+}
+
+
+.glow-on-hover:hover span:nth-of-type(3){
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 5px;
+  background:linear-gradient(270deg, transparent, white);
+  animation: animate3 2s infinite;
+  animation-delay: 1s;
+  margin: 0!important;
+}
+@keyframes animate3 {
+  0%{
+    right:-100%
+  }
+  100%{
+    right:100%
+  }
+}
+
+.glow-on-hover:hover span:nth-of-type(4){
+  bottom:-100%;
+  left:0;
+  width: 5px;
+  height: 100%;
+  background:linear-gradient(360deg, transparent, white);
+  animation: animate4 2s infinite;
+  animation-delay: 1.5s;
+  margin: 0!important;
+}
+@keyframes animate4 {
+  0%{
+    bottom:-100%
+  }
+  100%{
+    bottom:100%
+  }
 }

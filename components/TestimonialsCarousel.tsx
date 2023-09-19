@@ -22,18 +22,22 @@ export default function TestimonialsCarousel (){
             project:"FAMOUS FOX FED",
             text:"We worked with Gen Zen to produce an animated short film for the Famous Fox Federation. We were incredibly impressed with their work. They were very prompt in their responses, always willing to jump on calls, and helpful in brainstorming ideas. The final product was incredible, and I would highly recommend them to anyone looking for high-quality animation or design work."       
         },
+        {
+            name:"Degen Coin Flip",
+            project:"Degen Coin Flip",
+            text:"Loved working with Zen and the team all the way throughout the process. Super informative and understanding. Made our vision come to life and better. Fantastic quality and overall value was very high."        
+        },
     ]
     return(
 
             <Swiper
-                className="mySwipper"
+                className="testimonialSwiper"
                 navigation={true} 
                 modules={[Navigation]}
                 centeredSlides={true}
                 loop={true}
                 spaceBetween={120}
                 slidesPerView={2}
-
             >
                 {testimonials.map((testimonial, index) =>(
                     <SwiperSlide
@@ -42,6 +46,8 @@ export default function TestimonialsCarousel (){
                         <Testimonial name={testimonial.name} project={testimonial.project} text={testimonial.text}></Testimonial>
                     </SwiperSlide>
                 ))}
+                <div className="bg-black w-[200px] h-[100%] absolute blur-[100px] top-0 left-0 z-[100]"></div>
+                <div className="bg-black w-[200px] h-[100%] absolute blur-[100px] top-0 right-0 z-[100]"></div>
             </Swiper>
 
     )

@@ -28,7 +28,7 @@ export default function AnimationComponent (props:any) {
                         <img className="w-[100%]" src="/animation/Border.png" alt="Border"></img>
                     </div>
                     {/* STARS */}
-                    <div className="flex justify-center w-[100%] absolute z-40 ">
+                    <div className="flex justify-center w-[100%] absolute z-40 pointer-events-none ">
                         <img
                         style={{
                             width: "100%",
@@ -36,7 +36,7 @@ export default function AnimationComponent (props:any) {
                             transform:` translate(${props.translateXTopStar}, ${props.translateYTopStar})`
                         }}  src="/animation/Star.png" alt="Star"/>
                     </div>
-                    <div  className="flex justify-center w-[100%] absolute z-40 ">
+                    <div  className="flex justify-center w-[100%] absolute z-40 pointer-events-none ">
                         <img
                         style={{
                             width: "100%",
@@ -44,7 +44,7 @@ export default function AnimationComponent (props:any) {
                             transform:` translate(${props.translateXMiddleStar}, ${props.translateYMiddleStar})`
                         }}  src="/animation/Star.png" alt="Star"/>
                     </div>
-                    <div className="flex justify-center w-[100%] absolute z-40 ">
+                    <div className="flex justify-center w-[100%] absolute z-40 pointer-events-none ">
                         <img
                         style={{
                             width: "100%",
@@ -57,7 +57,7 @@ export default function AnimationComponent (props:any) {
                     <div className="absolute bottom-[5%] left-0 right-0 m-auto z-50 w-[100%]"  >
                         <h2>{props.title}</h2>
                         <h3 className="mb-[10px]">{props.categorie}</h3>
-                        <Button title={"Take Me There"} width="Big"></Button>
+                        <Button title={"Take Me There"}></Button>
                     </div>
                 </div>
             </div>

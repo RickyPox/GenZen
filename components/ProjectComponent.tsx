@@ -9,7 +9,7 @@ export default function ProjectComponent(props:any) {
 
     const href = props.href || "#";
 return (
-    <div className='relative w-screen h-screen'> 
+    <div className='relative'> 
         <div className='flex md:items-center items-end h-screen md:p-0 pb-[25%]'>
             <div className='md:w-1/2 md:pl-[90px] md:pr-[0px] px-[50px]'>
                 <img className='md:w-[100%] w-[50%] min-w-[200px]' src={`/projects/${props.title}/${props.title}Title.png`} alt="Title"></img>
