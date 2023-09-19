@@ -232,12 +232,15 @@ section{
   transform: rotate(90deg);
   left:21%!important;
   right: auto!important;
+ 
+
 }
 
 .testimonialSwiper .swiper-button-prev{
   transform: rotate(-90deg);
   right:21%!important;
   left:auto!important;
+
 }
 
 /*FORM */

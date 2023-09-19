@@ -2,7 +2,7 @@ import TestimonialsCarousel from "./TestimonialsCarousel";
 
 export default function TestimonialsComponent(){
     return(
-        <div className="w-screen h-screen">
+        <div>
             <div className="pt-[90px] flex justify-center px-[50px]">
                     <img className="w-full" src="/clients/TestimonialsTitle.png" alt="TestimonialsTitle"></img>
                 </div>

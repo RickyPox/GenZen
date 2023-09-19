@@ -2,6 +2,8 @@ import Navbar from '@/components/Navbar'
 import ProjectComponent from '@/components/ProjectComponent'
 import React, {useRef} from 'react'
 import {Link} from "react-scroll"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel, Navigation} from 'swiper/modules';
 
 
 export default function Projects() {
@@ -17,7 +19,7 @@ export default function Projects() {
         title: '3D services',
         text: 'Unlock creativity with our 3D services. From building unique characters, environments and a wide variety of 3D models, let your imagination run wild.',
         id:"3Dservices",
-        href:"3Dservices",
+        href:"3DServices",
         },
         {
             title: 'Branding & Design',
@@ -39,29 +41,37 @@ return (
     <div>
         <Navbar></Navbar>
             <div className="page-border page fixed -z-[10]"/>
-            <div>
+            <Swiper
+            slidesPerView={1}
+            direction={"vertical"}
+            mousewheel={true}
+            navigation={true}
+            modules={[Mousewheel, Navigation]}
+            className="verticalSwiper h-screen">
+
             {projects.map((project, index) => (
+            <SwiperSlide key={index}>
             <section
-                key={index}
                 id={project.id}
                 
             >
                 <ProjectComponent title={project.title} text={project.text} href={project.href}  />
             </section>
+            </SwiperSlide>
             ))}
-        </div>
+
 
                 {/* PROJECTS MENU */}
             <div className="hidden md:flex justify-center">
-        <div className="fixed bottom-[10%]  inline-flex items-center justify-center projectSections bg-black ">
-        {projects.map((project, index) => (
-            <React.Fragment key={index}>
-            {index > 0 && (
-                <img
-                className="w-[2%] ml-[10px] mr-[10px]"
-                src="/projects/ProjectsSectionsDivider.png"
-                alt="Divider"
-                />
+            <div className="fixed bottom-[10%]  inline-flex items-center justify-center projectSections bg-black ">
+            {projects.map((project, index) => (
+                <React.Fragment key={index}>
+                {index > 0 && (
+                    <img
+                    className="w-[2%] ml-[10px] mr-[10px]"
+                    src="/projects/ProjectsSectionsDivider.png"
+                    alt="Divider"
+                    />
             )}
             <Link
                 to={project.id}
@@ -75,7 +85,7 @@ return (
         </div>
     </div>
 
-        
+    </Swiper>
     </div>
     
 )

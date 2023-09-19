@@ -70,7 +70,7 @@ export default function TrustedBy (){
 
 
     return(
-        <div className="w-screen h-screen">
+        <div>
             <div className="pt-[90px] flex items-center justify-center px-[50px]">
                 <img className="w-full" src="/clients/trustedBy/TrustedByTitle.png" alt="TrustedByTitle"></img>
             </div>
