@@ -2,9 +2,20 @@ import ArtworkComponent from "@/components/ArtworkComponent";
 import Navbar from "@/components/Navbar";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Navigation} from 'swiper/modules';
+import ArtworkModal from "@/components/ArtworkModal";
+import { useState } from "react";
 
 
 export default function Artwork (){
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedItemName, setSelectedItemName] = useState('');
+
+    const toggleModal = (name:any) => {
+        setSelectedItemName(name); // Set the selected item's name
+        setIsModalOpen(!isModalOpen);
+    };
+
     return(
         <div>
             <Navbar></Navbar>
@@ -12,6 +23,7 @@ export default function Artwork (){
             <div>
                 <img className="fixed w-full px-[50px] mt-[60px] left-0 right-0 m-auto -z-[10]" src="/artwork/ArtworkTitle.png" alt="Title"/>
             </div>
+            <ArtworkModal  isOpen={isModalOpen} onClose={toggleModal} name={selectedItemName}></ArtworkModal>
             <Swiper
             slidesPerView={1}
             direction={"vertical"}
@@ -21,16 +33,16 @@ export default function Artwork (){
             className="verticalSwiper h-screen">
                 <SwiperSlide>
                     <section className="flex space-x-10 w-screen h-screen justify-center items-center px-[20px]">
-                        <ArtworkComponent name="Viperous" rarity="1/1 artwork"></ArtworkComponent>
-                        <ArtworkComponent name="Meegos" rarity="1/1 artwork"></ArtworkComponent>
-                        <ArtworkComponent name="Fuddies" rarity="1/1 artwork"></ArtworkComponent>
+                        <ArtworkComponent onClick={toggleModal} name="Viperous" rarity="1/1 artwork"></ArtworkComponent>
+                        <ArtworkComponent onClick={toggleModal} name="Meegos" rarity="1/1 artwork"></ArtworkComponent>
+                        <ArtworkComponent onClick={toggleModal} name="Fuddies" rarity="1/1 artwork"></ArtworkComponent>
                     </section>
                 </SwiperSlide>
                 <SwiperSlide>
                     <section className="flex space-x-10 w-screen h-screen justify-center items-center px-[20px]">
-                        <ArtworkComponent name="Viperous" rarity="1/1 artwork"></ArtworkComponent>
-                        <ArtworkComponent name="Meegos" rarity="1/1 artwork"></ArtworkComponent>
-                        <ArtworkComponent name="Fuddies" rarity="1/1 artwork"></ArtworkComponent>
+                        <ArtworkComponent onClick={toggleModal} name="Viperous" rarity="1/1 artwork"></ArtworkComponent>
+                        <ArtworkComponent onClick={toggleModal} name="Meegos" rarity="1/1 artwork"></ArtworkComponent>
+                        <ArtworkComponent onClick={toggleModal} name="Fuddies" rarity="1/1 artwork"></ArtworkComponent>
                     </section>
                 </SwiperSlide>
             </Swiper>

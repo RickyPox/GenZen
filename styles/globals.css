@@ -229,17 +229,21 @@ section{
 }
 
 .testimonialSwiper .swiper-button-next{
-  transform: rotate(90deg);
+  transform: rotate(90deg) translateX(0%)!important;
   left:21%!important;
   right: auto!important;
- 
-
+  top:50%!important;
+  bottom: auto!important;
+  position:absolute!important;
 }
 
 .testimonialSwiper .swiper-button-prev{
-  transform: rotate(-90deg);
+  transform: rotate(-90deg) translateX(0%)!important;
   right:21%!important;
   left:auto!important;
+  top:50%!important;
+  bottom: auto!important;
+  position:absolute!important;
 
 }
 
