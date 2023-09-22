@@ -15,9 +15,9 @@ export default function Clients(){
         mousewheel={true}
         navigation={true}
         modules={[Mousewheel, Navigation]}
-        className="verticalSwiper h-screen">
+        className="verticalSwiper h-screen overflow-scroll">
             <SwiperSlide>
-                <section>
+                <section className="w-full">
                     <TrustedBy></TrustedBy>
                 </section>
             </SwiperSlide>

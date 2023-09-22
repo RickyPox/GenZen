@@ -8,7 +8,7 @@ export default function About(){
             <div className="pt-[90px] flex items-center justify-center px-[50px]">
                 <img className="w-full" src="/aboutUs/aboutUsTitle.png" alt="AboutUsTitle"></img>
             </div>
-            <section className="w-screen flex flex-col ">
+            <section className="w-screen flex flex-col">
                 <div className="flex justify-center px-[50px] mt-[100px]">
                     <div>
                         <img className="w-[100%]" src="/aboutUs/Zen.png" alt="Zen"></img>

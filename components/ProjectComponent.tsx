@@ -15,7 +15,7 @@ return (
                 <img className='md:w-[100%] w-[50%] min-w-[200px]' src={`/projects/${props.title}/${props.title}Title.png`} alt="Title"></img>
                 <p className='projectText my-[40px] text-justify'>{props.text}</p>
                 <Link href={href} className='inline-block'>
-                    <img src='/Scroll_Icon.png' className='-rotate-90 md:w-[100%] w-[70%]' alt="ScrollIcon"></img>
+                    <img src='/Scroll_Icon.png' className='-rotate-90 md:w-[100%] w-[70%] leftRightAnimation' alt="ScrollIcon"></img>
                 </Link>
             </div>
         </div>

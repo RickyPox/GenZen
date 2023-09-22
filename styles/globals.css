@@ -12,6 +12,9 @@
         font-style: normal;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 
 body::-webkit-scrollbar{
@@ -42,8 +45,14 @@ p.projectText {
 }
 
 p.testimonial{
-  font-size: 16px
+  
+  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
 }
+
+div.testimonial-name-project{
+  width: max-content;
+}
+
 
 h3{
     font-family: "Maharlika", sans-serif;
@@ -58,37 +67,14 @@ section{
   margin: auto;
 }
 
-.projectSections{
-  border-image: url("/ButtonBorder.png") 40 round;
-  border-image-width: 20px;
-}
 
-.projectSections a{
-  padding-right: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
-  padding-left: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
-  padding-bottom: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
-  padding-top: calc(20px + (30 - 20) * ((100vw - 300px) / (1600 - 300)));
-  font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (1600 - 300)));
-  font-family: "Maharlika", sans-serif;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-  .projectSections a{
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    font-size:20px
-  }
-  
 
 .buttonToBorder{
     background: linear-gradient(0deg, rgba(39,39,39,1) 0%, rgba(66,66,66,1) 50%, rgba(180,180,180,1) 100%);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    border-image: url("/ButtonBorder.png") 30 round;
+    border-image: url("/ButtonBorder.png") 30 stretch;
     border-image-width: 10px;
     font-size: calc(10px + (15 - 10) * ((100vw - 300px) / (1600 - 300)));
     padding: calc(10px + (20 - 10) * ((100vw - 300px) / (1600 - 300)));
@@ -127,19 +113,6 @@ section{
     border-image: url("/ButtonBorder.png") 20 20 20 20 stretch stretch;
 }
 
-/* @media (pointer: fine){
-.scroll-container {
-    height: 100vh;
-    overflow-x: hidden;
-    scroll-snap-type: y mandatory;
-  }
-
-  .scroll-container section{
-    height: 100vh;
-    scroll-snap-align: center;
-  }
-}
- */
 
 .navbarItem:hover .navbarItemStar{
   opacity:1;
@@ -149,6 +122,16 @@ section{
   opacity:0;
 }
 
+.socials{
+  transition: all;
+  transition-duration: 200ms;
+}
+
+.socials:hover{
+  transform: scale(1.5);
+  transition: all;
+  transition-duration: 200ms;
+}
 
 @media screen and (min-width: 1600px) {
   h2{
@@ -162,17 +145,113 @@ section{
     padding: 20px;
   }
 
-  .p{
+  p{
     font-size:22px;
+  }
+  p .testimonial{
+    font-size: 16px
   }
 }
 
 
 /* SWIPER */
 
+
+.projectSections a{
+
+  font-family: "Maharlika", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+  
+
+.projectsSwiper .swiper-pagination{
+  width: max-content!important;
+  display: flex!important;
+  flex-direction: row!important;
+  position: fixed!important;
+  top:auto!important;
+  bottom:2%!important; 
+  left: 0!important;
+  right: 0!important;
+  margin: auto!important;
+  opacity: 1!important;
+  background-color: black;
+  border-image: url("/ButtonBorder.png") 40 stretch;
+  border-image-width: 20px;
+  font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (1600 - 300)));
+  justify-content: center!important;
+  align-items: center!important;
+}
+
+.projectsSwiper .swiper-pagination div{
+  width: max-content!important;
+  height: max-content!important;
+  display: flex!important;
+  flex-direction: row!important;
+  background-color: transparent!important;
+  font-family: "Maharlika", sans-serif;
+  text-transform: uppercase;
+  justify-content: center!important;
+  align-items: center!important;
+}
+
+.projectsSwiper .swiper-pagination div.swiper-pagination-bullet{
+  opacity: 1!important;
+  position: relative!important;
+  display: flex!important;
+
+  border-radius: 0px!important;
+}
+.projectsSwiper .swiper-pagination div.swiper-pagination-bullet-active{
+  color:#AF814B!important;
+}
+
+.projectsSwiper .swiper-pagination div.swiper-pagination-bullet::after{
+  content: url('/projects/ProjectsMenuDivider.png');
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+.projectsSwiper .swiper-pagination div.swiper-pagination-bullet:first-child{
+ margin-left: 20px!important;
+}
+.projectsSwiper .swiper-pagination div.swiper-pagination-bullet:last-child:after{
+  content:''!important;
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+
+.latestProjectsSwiper .swiper-pagination-bullet{
+  background-color: #D9D9D9!important;
+  border-radius: 0px!important;
+  width: 50px!important;
+  height: 5px!important;
+  opacity: 1!important;
+  margin: 0px 10px!important;
+}
+
+.latestProjectsSwiper .swiper-pagination-bullet-active{
+  background-color: #AF814B!important;
+
+}
+
+
 .verticalSwiper .swiper-button-prev:after, .verticalSwiper .swiper-button-next:after {
-  content: ""!important; 
-  margin:auto!important;
+  content:" "!important; 
+  margin: auto!important;
   background-image: url("/Scroll_Icon.png");
   width: 100px!important;
   height: 100px!important;
@@ -186,13 +265,15 @@ section{
   position: fixed;
   top:0;
   left: 0;
-  background-image: url("/Scroll_Icon.png");
-  background-size: cover;
   cursor: pointer;
+  transition: all!important;
+  transition-duration: 1s!important;
 }
 
 .verticalSwiper .swiper-button-disabled{
-  display: none!important;
+  opacity: 0!important;
+  transition: all!important;
+  transition-duration: 1s!important;
 }
 
 .verticalSwiper .swiper-button-next{
@@ -200,12 +281,27 @@ section{
   bottom:50px!important;
   left:50%!important;
   transform: translateX(-50%);
+  animation: updown 3s infinite;
+}
+
+@keyframes updown {
+  0%{
+    transform: translateY(0px) translateX(-50%);
+  }
+
+  50%{
+    transform: translateY(20px) translateX(-50%);
+  }
+  100%{
+    transform: translateY(0px) translateX(-50%);
+  }
 }
 
 .verticalSwiper .swiper-button-prev{
   transform: rotate(-90deg);
   right:21%!important;
   left:auto!important;
+  display: none!important;
 }
 
 
@@ -222,10 +318,11 @@ section{
 .testimonialSwiper .swiper-button-prev:after, .testimonialSwiper .swiper-button-next:after{
   content: ""!important; 
   margin:auto!important;
-  background-image: url("/Scroll_Icon.png");
+  background-image: url("/Scroll_Icon.png")!important;
   width: 100px!important;
   height: 100px!important;
   background-size: cover;
+  display: block!important;
 }
 
 .testimonialSwiper .swiper-button-next{
@@ -235,6 +332,8 @@ section{
   top:50%!important;
   bottom: auto!important;
   position:absolute!important;
+  background-image: url("/Scroll_Icon.png");
+  background-size: cover;
 }
 
 .testimonialSwiper .swiper-button-prev{
@@ -244,8 +343,11 @@ section{
   top:50%!important;
   bottom: auto!important;
   position:absolute!important;
-
+  display: block!important;
+  background-image: url("/Scroll_Icon.png");
+  background-size: cover;
 }
+
 
 /*FORM */
 
@@ -266,6 +368,15 @@ section{
 
 }
 
+.contact input[type=email]{
+  background-color: transparent;
+  border: solid 2px white;
+  color:white;
+  font-size: 24px;
+  font-family: "Maharlika", sans-serif;
+  padding-left: 20px;
+
+}
 .contact textarea{
   background-color: transparent;
   border: solid 2px white;
@@ -385,5 +496,23 @@ a.glow-on-hover span.glow{
   }
   100%{
     bottom:100%
+  }
+}
+
+
+.leftRightAnimation{
+  animation: leftright 3s infinite;
+}
+
+@keyframes leftright {
+  0%{
+    transform: translateX(0px) rotate(-90deg);
+  }
+
+  50%{
+    transform: translateX(20px) rotate(-90deg);
+  }
+  100%{
+    transform: translateX(0px) rotate(-90deg);
   }
 }

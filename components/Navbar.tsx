@@ -52,9 +52,15 @@ export default function Navbar () {
             </div>
             <div className={`${isMenuOpen ? 'flex' : 'hidden'} flex-col space-y-[20px] sm:mt-[100px] mt-[10%]`}>
                 <div className="flex space-x-[20px]">
-                    <img className="sm:w-[100%] w-[6%]" src="/navbar/Twitter.svg" alt="alt"/>
-                    <img className="sm:w-[100%] w-[6%]"  src="/navbar/LinkedIn.svg" alt="alt"/>
-                    <img className="sm:w-[100%] w-[6%]"  src="/navbar/Insta.svg" alt="alt"/>
+                    <a href="#">
+                        <img className="sm:w-[100%] w-[6%] cursor-pointer socials" src="/navbar/Twitter.svg" alt="alt"/>
+                    </a>
+                    <a href="#">
+                        <img className="sm:w-[100%] w-[6%] cursor-pointer socials"  src="/navbar/LinkedIn.svg" alt="alt"/>
+                    </a>
+                    <a href="#">
+                        <img className="sm:w-[100%] w-[6%] cursor-pointer socials"  src="/navbar/Insta.svg" alt="alt"/>
+                    </a>
                 </div>
                 <div>
                     <p>Zen@GenZen.Studio</p>
