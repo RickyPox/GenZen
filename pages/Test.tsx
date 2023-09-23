@@ -36,26 +36,18 @@ const projects = useMemo(() => [
 },
 // Add More projects
 ],[]);
-
+/* 
 const [activeSection, setActiveSection] = useState<string | null>(projects[0].id);
 
 useEffect(() => {
 const handleScroll = () => {
-
-    const activeIndex = projects.findIndex((p) => p.id === activeSection);
-    if (activeIndex !== -1 && activeIndex < projects.length - 1) {
-        const nextSection = document.getElementById(projects[activeIndex+1].id);
-        if (nextSection) {
-            nextSection.scrollIntoView();
-        }
-}
     // Loop through the projects and determine which one is currently in view
     for (const project of projects) {
     const section = document.getElementById(project.id);
     if (section) {
         const rect = section.getBoundingClientRect();
         const sectionHeight = section.clientHeight; // Height of the section
-        
+
         // Check if at least half of the section is visible in the viewport
         if (rect.top <= sectionHeight / 2 && rect.bottom >= sectionHeight / 2) {
         setActiveSection(project.id);
@@ -72,8 +64,14 @@ return () => {
 }, [projects, activeSection]);
 
 const ScrollTop = () => {
-
+const activeIndex = projects.findIndex((p) => p.id === activeSection);
+if (activeIndex !== -1 && activeIndex < projects.length - 1) {
+    const nextSection = document.getElementById(projects[activeIndex+1].id);
+    if (nextSection) {
+    nextSection.scrollIntoView();
+    }
 }
+} */
 
 return (
 <div className='relative'>
@@ -83,18 +81,29 @@ return (
       <div className="bg-black w-[20px] absolute h-screen top-0 right-0 z-[80]"></div>
       <div className="bg-black w-screen absolute h-[20px] top-0 z-[80]"></div>
       <div className="bg-black w-screen absolute h-[20px] bottom-0 z-[80]"></div>
-
-<button className="text-white h-[50px] w-[50px] fixed z-[100]" onClick={ScrollTop}>CLICK</button>
-     
-
+    <Swiper
+    direction={"vertical"}
+    mousewheel={true}
+    navigation={true}
+    modules={[Mousewheel, Pagination]}
+    pagination={{
+        clickable: true, // Make pagination clickable
+    renderBullet: function (index, className) {
+        // Customize pagination bullet
+        return(
+            '<div class="' + className + '">' + projects[index].title + '</div>');
+        },
+    }}
+    className="h-screen z-30 text-white projectsSwiper">
     {projects.map((project, index) => (
-
-        <section id={project.id} key={index}>
+        <SwiperSlide key={index}>
+        <section id={project.id}>
             <ProjectComponent title={project.title} text={project.text} href={project.href} />
         </section>
+        </SwiperSlide>
     ))}
-
- {  <div className="flex justify-center">
+    </Swiper>
+ {/*     <div className="flex justify-center">
     <div className="fixed bottom-[10%]  inline-flex items-center justify-center projectSections bg-black ">
         {projects.map((project, index) => (
         <React.Fragment key={index}>
@@ -119,7 +128,7 @@ return (
         </React.Fragment>
         ))}
     </div>
-    </div>  }
+    </div>  */}
 </div>
 );
 }

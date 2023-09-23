@@ -5,7 +5,7 @@ export default function BrandingDesignComponent(props:any){
         <div>
                 <div className="relative">
                     <div>
-                        <img className="w-full" src={`/brandingDesign/${props.name}.png`} alt="Hero"></img>
+                        <img className="w-full" src={props.imgsrc} alt="Hero"></img>
                     </div>
                     <div className=" absolute bottom-[17%] left-0 right-0 m-auto">
                         <h2>{props.name}</h2>

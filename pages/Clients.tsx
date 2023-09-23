@@ -4,18 +4,25 @@ import TrustedBy from "@/components/TrustedBy";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Navigation} from 'swiper/modules';
 
+
 export default function Clients(){
+
+    
+    
+
     return(
     <div>
         <Navbar></Navbar>
         <div className="page-border page fixed z-[100] pointer-events-none"/>
         <Swiper
-        slidesPerView={1}
+        slidesPerView={"auto"}
         direction={"vertical"}
-        mousewheel={true}
+        mousewheel={{ 
+            releaseOnEdges:true,
+        }}
         navigation={true}
         modules={[Mousewheel, Navigation]}
-        className="verticalSwiper h-screen overflow-scroll">
+        className="verticalSwiper h-screen">
             <SwiperSlide>
                 <section className="w-full">
                     <TrustedBy></TrustedBy>

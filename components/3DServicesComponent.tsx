@@ -5,7 +5,7 @@ export default function Services3DComponent (props:any){
         <div>
                 <div className="relative">
                     <div>
-                        <img className="w-full" src={`/3DServices/${props.image}.png`} alt="Hero"></img>
+                        <img className="w-full" src={props.imgsrc} alt="Hero"></img>
                     </div>
                     <div className=" absolute bottom-[17%] left-0 right-0 m-auto">
                         <h2>{props.name}</h2>
@@ -17,4 +17,4 @@ export default function Services3DComponent (props:any){
                 </div>
         </div>
     )
-}
+} 

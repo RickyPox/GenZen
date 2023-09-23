@@ -27,12 +27,12 @@ export default function Home() {
         className="verticalSwiper h-screen relative z-70">
           <SwiperSlide>
           <section className='w-screen h-screen flex justify-center '>
-            <img className='w-full px-[100px] m-auto' src='/Home/Hero.png' alt="Hero"></img>
+            <img className='w-full px-[100px] m-auto' src='/home/Hero.png' alt="Hero"></img>
           </section>
         </SwiperSlide>
         <SwiperSlide>
           <section className='w-screen h-screen'>
-            <img className='w-full px-[50px] m-auto pt-[60px]' src='/Home/ShowReel.png' alt="Title"></img>
+            <img className='w-full px-[50px] m-auto pt-[60px]' src='/home/ShowReel.png' alt="Title"></img>
             <div className='videoBorder w-4/6 h-4/6 m-auto'>
             </div>
           </section>

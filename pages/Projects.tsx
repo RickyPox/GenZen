@@ -84,7 +84,6 @@ return (
     <Swiper
     direction={"vertical"}
     mousewheel={true}
-    navigation={true}
     modules={[Mousewheel, Pagination]}
     pagination={{
         clickable: true, // Make pagination clickable
