@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Navigation} from 'swiper/modules';
 import ArtworkModal from "@/components/ArtworkModal";
 import { useState } from "react";
+import 'swiper/css/navigation';
+import "swiper/css";
 
 
 export default function Artwork (){

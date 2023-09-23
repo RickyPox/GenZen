@@ -3,6 +3,8 @@ import Services3DComponent from "@/components/3DServices";
 import Navbar from "@/components/Navbar";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Navigation} from 'swiper/modules';
+import 'swiper/css/navigation';
+import "swiper/css";
 
 export default function Services3D (){
     return(

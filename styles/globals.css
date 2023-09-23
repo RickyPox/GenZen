@@ -50,7 +50,7 @@ p.testimonial{
 }
 
 div.testimonial-name-project{
-  width: max-content;
+  width: 200px;
 }
 
 
@@ -164,8 +164,6 @@ section{
   cursor: pointer;
 }
 
-  
-
 .projectsSwiper .swiper-pagination{
   width: max-content!important;
   display: flex!important;
@@ -217,12 +215,12 @@ section{
   
 }
 .projectsSwiper .swiper-pagination div.swiper-pagination-bullet:first-child{
- margin-left: 20px!important;
+  margin-left: 20px!important;
 }
 .projectsSwiper .swiper-pagination div.swiper-pagination-bullet:last-child:after{
   content:''!important;
- }
- 
+}
+
 
 
 

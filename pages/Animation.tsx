@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import AnimationComponent from "../components/AnimationComponent";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Mousewheel, Navigation} from 'swiper/modules';
+import 'swiper/css/navigation';
+import "swiper/css";
 
 export default function Animation (){
     return(
