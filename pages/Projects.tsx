@@ -15,24 +15,32 @@ const projects = useMemo(() => [
     text: "Venture into our animation realm, where ideas take on vibrant narratives through captivating visuals. Unveil our portfolio for a visual storytelling odyssey.",
     id: "animation",
     href: "Animation",
+    imgsrcTitle:"/projects/animation/animationTitle.png",
+    imgsrcChar:"/projects/animation/animationChar.png",
 },
 {
     title: "3D services",
     text: "Unlock creativity with our 3D services. From building unique characters, environments and a wide variety of 3D models, let your imagination run wild.",
     id: "services3D",
     href: "3DServices",
+    imgsrcTitle:"/projects/3Dservices/3DservicesTitle.png",
+    imgsrcChar:"/projects/3Dservices/3DservicesChar.png",
 },
 {
     title: "Branding & Design",
     text: "Explore our branding and design portfolio, a testament to our skill in turning brand visions into impactful designs.",
     id: "branding&Desing",
     href: "Branding&Design",
+    imgsrcTitle:"/projects/brandingDesign/brandingDesignTitle.png",
+    imgsrcChar:"/projects/brandingDesign/brandingDesignChar.png",
 },
 {
     title: "Artwork",
     text: "A Glimpse of Imagination. Our collection of artworks that span different styles and emotions, inviting you to connect with creativity.",
     id: "artwork",
     href: "Artwork",
+    imgsrcTitle:"/projects/artwork/ArtworkTitle.png",
+    imgsrcChar:"/projects/artwork/ArtworkChar.png",
 },
 // Add More projects
 ],[]);
@@ -97,7 +105,7 @@ return (
     {projects.map((project, index) => (
         <SwiperSlide key={index}>
         <section id={project.id}>
-            <ProjectComponent title={project.title} text={project.text} href={project.href} />
+            <ProjectComponent title={project.title} text={project.text} href={project.href} imgsrcTitle={project.imgsrcTitle} imgsrcChar={project.imgsrcChar} />
         </section>
         </SwiperSlide>
     ))}

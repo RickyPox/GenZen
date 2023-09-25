@@ -18,7 +18,7 @@ export default function Home() {
       <div className="bg-black w-screen absolute h-[20px] top-0 z-[80]"></div>
       <div className="bg-black w-screen absolute h-[20px] bottom-0 z-[80]"></div>
 
-     <Swiper
+      <Swiper
         slidesPerView={1}
         direction={"vertical"}
         mousewheel={true}
@@ -41,7 +41,7 @@ export default function Home() {
         <section className='w-screen h-screen flex items-center justify-center'>
           <div className='w-1/2 flex items-center pl-[120px] h-screen'>
             <div>
-              <img className='w-full pt-[60px]' src='/Home/OurLatestProjects.png' alt="Title"></img>
+              <img className='w-full pt-[60px]' src='/home/OurLatestProjects.png' alt="Title"></img>
               <p className='text-justify'>
                 Dive into a world of creativity and motion with our latest animation projects! 
                 Our team has been hard at work crafting captivating visual stories that come to life through the magic of animation. 
