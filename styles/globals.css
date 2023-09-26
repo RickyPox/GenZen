@@ -222,16 +222,6 @@ section{
 }
 
 
-
-
-
-
-
-
-
-
-
-
 .latestProjectsSwiper .swiper-pagination-bullet{
   background-color: #D9D9D9!important;
   border-radius: 0px!important;
@@ -249,23 +239,27 @@ section{
 
 .verticalSwiper .swiper-button-prev:after, .verticalSwiper .swiper-button-next:after {
   content:" "!important; 
-  margin: auto!important;
-  background-image: url("/Scroll_Icon.png");
-  width: 100px!important;
-  height: 100px!important;
+  background-image: url("/ScrollPulsating.png");
   background-size: cover;
-  
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90px!important;
+  height: 90px!important;
 }
 
 .verticalSwiper .swiper-button-prev, .verticalSwiper .swiper-button-next{
-  width: 130px!important;
-  height: 130px!important;
+  width: 90px!important;
+  height: 90px!important;
   position: fixed;
   top:0;
   left: 0;
   cursor: pointer;
   transition: all!important;
   transition-duration: 1s!important;
+  background-image: url("/Scroll_Icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .verticalSwiper .swiper-button-disabled{
@@ -280,6 +274,14 @@ section{
   left:50%!important;
   transform: translateX(-50%);
   animation: updown 3s infinite;
+}
+
+.verticalSwiper .swiper-button-next::after{
+  top: auto!important;
+  left:50%!important;
+  transform: translateX(-50%);
+  animation: updown 3s infinite;
+  position: fixed;
 }
 
 @keyframes updown {

@@ -120,7 +120,7 @@ export default function Animation (){
             <div className="bg-black w-screen absolute h-[20px] top-0 z-[80]"></div>
             <div className="bg-black w-screen absolute h-[20px] bottom-0 z-[80]"></div>
                     <div>
-                        <img className="fixed w-[90%] mt-[60px] left-0 right-0 m-auto -z-[10]" src="/animation/AnimationTitle.png" alt="Title Image"/>
+                        <img className="fixed w-[90%] mt-[60px] left-0 right-0 m-auto z-[10]" src="/animation/AnimationTitle.png" alt="Title Image"/>
                     </div>
                     <Swiper 
                     slidesPerView={1}

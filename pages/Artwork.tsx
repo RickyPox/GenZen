@@ -140,7 +140,7 @@ export default function Artwork (){
             <div className="bg-black w-screen absolute h-[20px] top-0 z-[80]"></div>
             <div className="bg-black w-screen absolute h-[20px] bottom-0 z-[80]"></div>
             <div>
-                <img className="fixed w-full px-[50px] mt-[60px] left-0 right-0 m-auto -z-[10]" src="/artwork/ArtworkTitle.png" alt="Title"/>
+                <img className="fixed w-full px-[50px] mt-[60px] left-0 right-0 m-auto z-[10]" src="/artwork/ArtworkTitle.png" alt="Title"/>
             </div>
             <ArtworkModal  isOpen={isModalOpen} onClose={toggleModal} imgmodalsrc={selectedItem}></ArtworkModal>
             <Swiper

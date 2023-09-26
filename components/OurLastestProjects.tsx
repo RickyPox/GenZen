@@ -44,7 +44,8 @@ export default function OurLastestProjects (){
                         <img className='mb-[80px]' src={`/latestProjects/${image.name}.png`} alt={`${image.name}`}/>
                     </SwiperSlide>
                 ))}
-                <div className="bg-black w-[200px] h-[100%] absolute blur-[100px] top-0 right-0 z-[100]"></div>
+                <div className="bg-gradient-to-l from-black to-black/0 w-[200px] h-[100%] absolute top-0 right-0 z-[100]"></div>
+                <div className="bg-gradient-to-r from-black to-black/0 w-[350px] h-[100%] absolute  top-0 left-0 z-[100]"></div>
         </Swiper>
     )
 }
