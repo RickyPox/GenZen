@@ -61,6 +61,7 @@ export default function Services3D (){
                 <img className="fixed w-full px-[50px] mt-[60px] left-0 right-0 m-auto z-[10]" src="/3DServices/3DServicesTitle.png" alt="Title"/>
             </div>
             <Swiper
+            speed={900}
             slidesPerView={1}
             direction={"vertical"}
             mousewheel={true}

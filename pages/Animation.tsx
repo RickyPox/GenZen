@@ -123,6 +123,7 @@ export default function Animation (){
                         <img className="fixed w-[90%] mt-[60px] left-0 right-0 m-auto z-[10]" src="/animation/AnimationTitle.png" alt="Title Image"/>
                     </div>
                     <Swiper 
+                    speed={900}
                     slidesPerView={1}
                     direction={"vertical"}
                     mousewheel={true}

@@ -19,6 +19,7 @@ export default function Home() {
       <div className="bg-black w-screen absolute h-[20px] bottom-0 z-[80]"></div>
 
       <Swiper
+      speed={900}
         slidesPerView={1}
         direction={"vertical"}
         mousewheel={true}

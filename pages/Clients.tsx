@@ -15,7 +15,8 @@ export default function Clients(){
         <Navbar></Navbar>
         <div className="page-border page fixed z-[100] pointer-events-none"/>
         <Swiper
-        slidesPerView={"auto"}
+        speed={900}
+        slidesPerView={1}
         direction={"vertical"}
         mousewheel={{ 
             releaseOnEdges:true,

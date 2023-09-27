@@ -90,6 +90,7 @@ return (
       <div className="bg-black w-screen absolute h-[20px] top-0 z-[80]"></div>
       <div className="bg-black w-screen absolute h-[20px] bottom-0 z-[80]"></div>
     <Swiper
+    speed={900}
     direction={"vertical"}
     mousewheel={true}
     modules={[Mousewheel, Pagination]}

@@ -144,6 +144,7 @@ export default function Artwork (){
             </div>
             <ArtworkModal  isOpen={isModalOpen} onClose={toggleModal} imgmodalsrc={selectedItem}></ArtworkModal>
             <Swiper
+            speed={900}
             slidesPerView={1}
             direction={"vertical"}
             mousewheel={true}
