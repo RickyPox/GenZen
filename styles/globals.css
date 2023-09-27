@@ -133,6 +133,17 @@ section{
   transition-duration: 200ms;
 }
 
+.clients img:hover{
+  filter: invert(51%) sepia(52%) saturate(397%) hue-rotate(352deg) brightness(93%) contrast(93%);
+  transition: all;
+  transition-duration: 200ms;
+}
+
+.clients img{
+  filter: invert(35%) sepia(1%) saturate(0%) hue-rotate(5deg) brightness(89%) contrast(80%);
+}
+
+
 @media screen and (min-width: 1600px) {
   h2{
     font-size:32px;
@@ -153,6 +164,48 @@ section{
   }
 }
 
+
+.ScrollIcon{
+  background-image: url("/Scroll.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: solid 2px #AF814B;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  position: relative;
+  animation: leftright 3s infinite;
+}
+
+.ScrollIcon::after{
+  content:" "; 
+  width: 60px;
+  height: 60px;
+  border: solid 1px #AF814B;
+  border-radius: 100%;
+  top:50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  transform-origin: left top;
+  animation: pulsating 2s ease-out infinite;
+
+}
+
+.ScrollIcon::before{
+  content:" "; 
+  width: 60px;
+  height: 60px;
+  border: solid 1px #AF814B;
+  border-radius: 100%;
+  top:50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  animation: pulsating 2s 1s ease-out infinite;
+  transform-origin: left top;
+}
 
 /* SWIPER */
 
@@ -236,31 +289,57 @@ section{
 
 }
 
-
-.verticalSwiper .swiper-button-prev:after, .verticalSwiper .swiper-button-next:after {
+.verticalSwiper .swiper-button-next:after {
   content:" "!important; 
-  background-image: url("/ScrollPulsating.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 90px!important;
-  height: 90px!important;
+  width: 60px!important;
+  height: 60px!important;
+  border: solid 1px #AF814B;
+  border-radius: 100%;
+  top: auto!important;
+  left:50%!important;
+  transform: translateX(-50%);
+  position: fixed;
+  transform-origin: left;
+  animation: pulsating 2s ease-out infinite;
 }
 
-.verticalSwiper .swiper-button-prev, .verticalSwiper .swiper-button-next{
-  width: 90px!important;
-  height: 90px!important;
+.verticalSwiper .swiper-button-next:before {
+  content:" "!important; 
+  width: 60px!important;
+  height: 60px!important;
+  border: solid 1px #AF814B;
+  border-radius: 100%;
+  top: auto!important;
+  left:50%!important;
+  transform: translateX(-50%);
   position: fixed;
-  top:0;
-  left: 0;
-  cursor: pointer;
-  transition: all!important;
-  transition-duration: 1s!important;
-  background-image: url("/Scroll_Icon.png");
+  transform-origin: left;
+  animation: pulsating 2s 1s ease-out infinite;
+}
+
+.verticalSwiper .swiper-button-next{
+  background-image: url("/Scroll.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  width: 60px!important;
+  height: 60px!important;
+  border: solid 2px #AF814B;
+  border-radius: 100%;
+  top: auto!important;
+  left:50%!important;
+  transform: translateX(-50%);
+  position: fixed;
+  animation: updown 2s ease-in-out  infinite;
+
 }
+
+.verticalSwiper .swiper-button-next{
+  top: auto!important;
+  bottom:50px!important;
+  left:50%!important;
+}
+
 
 .verticalSwiper .swiper-button-disabled{
   opacity: 0!important;
@@ -268,21 +347,6 @@ section{
   transition-duration: 1s!important;
 }
 
-.verticalSwiper .swiper-button-next{
-  top: auto!important;
-  bottom:50px!important;
-  left:50%!important;
-  transform: translateX(-50%);
-  animation: updown 3s infinite;
-}
-
-.verticalSwiper .swiper-button-next::after{
-  top: auto!important;
-  left:50%!important;
-  transform: translateX(-50%);
-  animation: updown 3s infinite;
-  position: fixed;
-}
 
 @keyframes updown {
   0%{
@@ -297,10 +361,15 @@ section{
   }
 }
 
+@keyframes pulsating{
+
+  100%{
+    scale:1.75;
+    opacity: 0;
+  }
+}
+
 .verticalSwiper .swiper-button-prev{
-  transform: rotate(-90deg);
-  right:21%!important;
-  left:auto!important;
   display: none!important;
 }
 
@@ -311,41 +380,57 @@ section{
 }
 
 .testimonialSwiper .swiper-button-prev,.testimonialSwiper .swiper-button-next{
-  width: 100px!important;
-  height: 100px!important;
+  width: 60px!important;
+  height: 60px!important;
+  background-image: url("/Scroll.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .testimonialSwiper .swiper-button-prev:after, .testimonialSwiper .swiper-button-next:after{
   content: ""!important; 
   margin:auto!important;
-  background-image: url("/Scroll_Icon.png")!important;
-  width: 100px!important;
-  height: 100px!important;
-  background-size: cover;
+  width: 60px!important;
+  height: 60px!important;
+  background-size: contain;
   display: block!important;
+  animation: none!important;
+}
+.testimonialSwiper .swiper-button-prev::before, .testimonialSwiper .swiper-button-next::before{
+  content: ""!important; 
+  margin:auto!important;
+  width: 60px!important;
+  height: 60px!important;
+  background-size: contain;
+  display: block!important;
+  animation: none!important;
 }
 
 .testimonialSwiper .swiper-button-next{
-  transform: rotate(90deg) translateX(0%)!important;
+  transform: rotate(90deg) translateX(50%)!important;
   left:21%!important;
   right: auto!important;
   top:50%!important;
   bottom: auto!important;
   position:absolute!important;
-  background-image: url("/Scroll_Icon.png");
-  background-size: cover;
+  background-size: contain;
+  animation: none!important;
 }
 
 .testimonialSwiper .swiper-button-prev{
-  transform: rotate(-90deg) translateX(0%)!important;
+  transform: rotate(-90deg) translateX(-50%)!important;
   right:21%!important;
   left:auto!important;
   top:50%!important;
   bottom: auto!important;
   position:absolute!important;
   display: block!important;
-  background-image: url("/Scroll_Icon.png");
-  background-size: cover;
+  border: solid 2px #AF814B;
+  border-radius: 100%;
+  background-image: url("/Scroll.png");
+  background-size: contain;
+  animation: none!important;
 }
 
 
@@ -497,11 +582,6 @@ a.glow-on-hover span.glow{
   100%{
     bottom:100%
   }
-}
-
-
-.leftRightAnimation{
-  animation: leftright 3s infinite;
 }
 
 @keyframes leftright {

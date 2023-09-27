@@ -10,7 +10,7 @@ export default function TrustedBy (){
                 <img className="w-[70%]" src="/clients/trustedBy/TrustedByTitle.png" alt="TrustedByTitle"></img>
             </div>
             <div className="w-full">
-                <div className="w-4/6 m-auto mt-[50px] mb-[50px] flex flex-col opacity-[35%] space-y-[45px]">
+                <div className="w-4/6 m-auto mt-[50px] mb-[50px] flex flex-col space-y-[45px] clients">
                     <div className="flex items-center justify-center space-x-[50px]">
                         <Link href="#">
                             <img className="w-full" src="/clients/trustedBy/Anybodies.png" alt="Anybodies"></img>
