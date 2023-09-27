@@ -6,7 +6,7 @@ return(
             <div className="mt-[80px] ml-[150px] w-1/2">
                 <img className="z-10 w-[100%] pointer-events-none relative" src="/contact/sendRavenTitle.png" alt="Title"></img>
             </div>
-            <form className="w-1/2 contact flex flex-col mt-[80px] pr-[80px] space-y-[40px] relative">
+            <form className="w-[40%] contact flex flex-col mt-[80px] pr-[50px] space-y-[30px] relative">
                 <div className="w-full flex space-x-[20px]">   
                     <input className="w-1/2 h-[100px]" type="text" id="name" name="name" placeholder="Name"></input>
                     <input className="w-1/2 h-[100px]" type="text" id="projectname" name="projectname" placeholder="Project Name"></input>
